@@ -1,19 +1,15 @@
+import {informacion} from './informacion.js';
+
 class Cards extends HTMLElement {
     constructor() {
         super()
-
-        async function infromacion() {
-            const response = await fetch(request);
-            const infocompleta = await informacion.json();
-        }
+        this.attachShadow({ mode: "open" });
+        const info = informacion()
     }
+    
 
     connectedCallback(){
-        const shadow = this.attachShadow({ mode: "open" });
-        this.tarjeta = HTMLElement(div)
-
-
-        this.tarjeta.innerHTML = /*html*/ `
+        this.innerHTML = /*html*/ `
 
         <style>
         </style>
@@ -32,5 +28,5 @@ class Cards extends HTMLElement {
 
 }
 
-export default Cards
+
 customElements.define("cards-eventos", Cards);
